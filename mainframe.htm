@@ -7,6 +7,8 @@
 
 <style>/* 自動適配螢幕寬度（2026 年加的） */.zz-stage{position:relative;width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto}table.zz-stage{display:table}.zz-read{position:relative;width:-moz-fit-content;width:fit-content;padding-left:44px}@media (max-width:600px){body{margin:8px!important}.zz-stage.zz-book{width:auto}table.zz-book{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));width:auto!important;margin:0!important}table.zz-book>tbody,table.zz-book>tbody>tr{display:contents}table.zz-book>tbody>tr>td{display:block;width:auto!important;height:auto!important}table.zz-book td.zz-tb,table.zz-book td.zz-l,table.zz-book td.zz-r{display:none!important}table.zz-book td.zz-tab{order:-1}table.zz-book td.zz-tab img{display:block;width:100%;height:auto}table.zz-book td.zz-body{grid-column:1/-1;padding-top:10px}video{max-width:100%;height:auto}table.zz-assoc,table.zz-assoc>tbody,table.zz-assoc>tbody>tr,table.zz-assoc>tbody>tr>td{display:block;width:auto!important;height:auto!important;float:none}iframe.zz-voc{height:55vh}body.zz-flow table[width]:not([width$="%"]){width:auto!important}body.zz-flow img{max-width:100%;height:auto}}</style>
 
+<style>/* 首頁說明（2026 年把黃底黃字的圖改成文字）：寬度同原圖，框寬時跟著 .zz-stage 放大；手機上照字換行 */.zz-stage.zz-cover{width:445px;max-width:100%;box-sizing:border-box;padding:8px 8px 2px;text-align:justify;background-color:#ffd79c;background-image:linear-gradient(#f2dbb9 1px,transparent 1px),linear-gradient(90deg,#f2dbb9 1px,transparent 1px);background-size:12px 12px;font:13px/21px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:#222}.zz-cover .cv-q{display:flow-root;margin:0 0 12px}.zz-cover .cv-ic{float:left;margin:0 8px 0 0}.zz-cover .cv-tab{display:inline-block;margin:2px 0 6px;padding:0 10px;border-radius:6px;background:#e90;color:#373535;font-weight:700;font-size:15px;line-height:23px;box-shadow:2px 2px 0 #b8b8b8}.zz-cover .cv-mouse{vertical-align:middle;margin-left:10px}.zz-cover p{margin:0}.zz-cover a:link,.zz-cover a:visited{color:#003399;text-decoration:underline}@media (max-width:600px){td[width]{width:auto!important}}</style>
+
 <style>
 .effect{filter:alpha(opacity=95)}
 a:link {  color: #993300; text-decoration: none}
@@ -22,52 +24,21 @@ a:visited {  color: #993300; text-decoration: none}
   <font size="2" color="#003399"> 
   <script language="JavaScript">
 var enabled = 0; today = new Date();
-document.write("今天是" + today.getYear() + "年" + (today.getMonth() + 1 ) + "月" +today.getDate() + "日") </script>
+document.write("今天是" + today.getFullYear() + "年" + (today.getMonth() + 1 ) + "月" +today.getDate() + "日") </script>
   ，歡迎進來跟大家一起學台語，很高興見到你!! </font><br>
 </div>
 <table width="100%" border="0" cellspacing="3" align="center">
   <tr> 
     <td height="2" colspan="2"> <div align="center"> 
-        <table width="424" border="0" cellspacing="0" cellpadding="0" height="434" class="zz-stage">
-          <tr> 
-            <td><img src="images/mainbg1.gif" width="114" height="114"></td>
-            <td><img src="images/mainbg2.gif" width="118" height="114"></td>
-            <td><img src="images/mainbg3.gif" width="110" height="114"></td>
-            <td><img src="images/mainbg4.gif" width="103" height="114"></td>
-          </tr>
-          <tr> 
-            <td><img src="images/mainbg5.gif" width="114" height="114"></td>
-            <td><img src="images/mainbg6.gif" width="118" height="114"></td>
-            <td><img src="images/mainbg7.gif" width="110" height="114"></td>
-            <td><img src="images/mainbg8.gif" width="103" height="114"></td>
-          </tr>
-          <tr> 
-            <td><img src="images/mainbg9.gif" width="114" height="114"></td>
-            <td><img src="images/mainbg10.gif" width="118" height="114"></td>
-            <td><img src="images/mainbg11.gif" width="110" height="114"></td>
-            <td><img src="images/mainbg12.gif" width="103" height="114"></td>
-          </tr>
-          <tr> 
-            <td><img src="images/mainbg13.gif" width="114" height="95" usemap="#Map" border="0"></td>
-            <td><img src="images/mainbg14.gif" width="118" height="95" usemap="#Map2" border="0"></td>
-            <td><img src="images/mainbg15.gif" width="110" height="95" usemap="#Map3" border="0"></td>
-            <td><img src="images/mainbg16.gif" width="103" height="95" usemap="#Map4" border="0"></td>
-          </tr>
-        </table>
-        <map name="Map">
-          <area shape="rect" coords="8,16,99,28" href="#">
-          <area shape="rect" coords="9,39,89,50" href="#">
-          <area shape="rect" coords="10,57,113,68" href="lessons/dissertation.doc" target="_blank">
-        </map>
-        <map name="Map2">
-          <area shape="rect" coords="1,56,118,68" href="lessons/dissertation.doc" target="_blank">
-        </map>
-        <map name="Map3">
-          <area shape="rect" coords="1,55,109,68" href="lessons/dissertation.doc" target="_blank">
-        </map>
-        <map name="Map4">
-          <area shape="rect" coords="-3,58,48,67" href="lessons/dissertation.doc" target="_blank">
-        </map>
+        <div class="zz-stage zz-cover">
+<div class="cv-q"><img class="cv-ic" src="images/cover_lips.png" width="74" height="67" alt=""><div class="cv-tab">台語～我也可以學嗎!?</div>
+<p>這個會話教材的教學對象並不是完全不懂閩南語的人，而是略通閩南語、或閩南語說得不標準、不流利，或雖然還算流利，但是對於閩南語的交際語言較生疏，不知道如何在不同的交際場合使用合適語言的人。因此這本教材不是最初階的基礎讀本，寧可說是「進階」(advanced)的讀本。主要的教學對象設定為已經會說華語，尤其是以華語為第一語言的台灣新生代。</p></div>
+<div class="cv-q"><img class="cv-ic" src="images/cover_ball.png" width="73" height="71" alt=""><div class="cv-tab">我的台語標準嗎!?</div>
+<p>本教材共有十二課，每課都設計了不同的「場景」，針對不同的溝通功能設計適當的「對話」，場景包括：日常對話、診所、購物、邀請等。每一場對話都設計了二至三個人互相對話。所用的語言都是日常生活中最純正、最常用的台灣閩南語，也就是所謂的「台灣話」。文字以漢字為主，無適當漢字則用拼音字，不強求本字。每一個字都用TLPA音標注音，本調、變調、輕聲、隨前變調等調性都詳細註明，字字對照。因此本書兼具漢字正音與漢字教育的效果，學生使用本書不但知道每一個詞語精確的發音，並且也知道正確的漢字寫法。</p></div>
+<div class="cv-q"><div class="cv-tab">怎樣可以學的更好!?</div><img class="cv-mouse" src="images/cover_mouse.png" width="79" height="50" alt="">
+<p><a href="/tailo/educate.htm" target="_blank">來去學TLPA音標</a></p></div>
+</div>
+
         <br>
       </div></td>
   </tr>
@@ -80,12 +51,12 @@ document.write("今天是" + today.getYear() + "年" + (today.getMonth() + 1 ) +
           <tr> 
             <td width="190"> <div align="right"><a href="notice.htm#flash"><img src="images/get_flash.gif" width="80" height="28" border="0"></a> 
                 <a href="notice.htm#flash"><img src="images/get_shockwave.gif" width="80" height="28" border="0"></a></div></td>
-            <td width="405" > <div align="center"><font size="2" color="#CC9966">本站內容以Flash技術製作，請下載播放程式，以便瀏覽學習<br>
-                最佳瀏覽 Internet Expoler 5.5以上版本，並搭配800x600螢幕</font><font size="2" color="#CC9966">設定</font></div></td>
+            <td width="405" > <div align="center"><font size="2" color="#663300">本站內容以Flash技術製作，請下載播放程式，以便瀏覽學習<br>
+                最佳瀏覽 Internet Expoler 5.5以上版本，並搭配800x600螢幕</font><font size="2" color="#663300">設定</font></div></td>
           </tr>
           <tr> 
-            <td colspan="2"> <hr color="#CC9966"> <div align="center"><font size="2" color="#CC9966">製作團隊 
-                2000-2001 &copy; 版權所有，未經授權請勿任意轉載 。<a href="copyright.htm">版權聲明</a><font size="2" color="#CC9966"><br>
+            <td colspan="2"> <hr color="#CC9966"> <div align="center"><font size="2" color="#663300">製作團隊 
+                2000-2001 &copy; 版權所有，未經授權請勿任意轉載 。<a href="copyright.htm">版權聲明</a><font size="2" color="#663300"><br>
                 Copyright &copy; 2000-2001 Team. All rights reserved.</font> </font></div></td>
           </tr>
         </table>
