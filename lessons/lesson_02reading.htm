@@ -151,6 +151,18 @@ window.RufflePlayer.config = {
     b.style.zoom = "";                       // 縮放過還是比框寬（例如首頁的拼圖在別的表格裡），整頁再等比縮小
     for (var k = 0; k < 3 && se.scrollWidth > se.clientWidth + 1; k++)
       b.style.zoom = ((parseFloat(b.style.zoom) || 1) * se.clientWidth / se.scrollWidth * 0.995).toFixed(3);
+    unzoomRuffle();
+  }
+  function unzoomRuffle() {                 // Ruffle 在 zoom 裡點擊會錯位：播放器反向縮回 1 倍、寬高改成放大後的大小
+    var rf = document.querySelectorAll(".rf-swf"), i, p, w, h, z;
+    for (i = 0; i < rf.length; i++) {
+      p = rf[i].querySelector("ruffle-player"); if (!p) continue;
+      w = parseFloat(rf[i].style.width); h = parseFloat(rf[i].style.height);
+      z = rf[i].getBoundingClientRect().width / rf[i].offsetWidth;
+      if (!(z > 0) || Math.abs(z - 1) < 0.001) z = 1;
+      p.style.zoom = z === 1 ? "" : (1 / z).toFixed(5);
+      p.style.width = w * z + "px"; p.style.height = h * z + "px";
+    }
   }
   function run() { fit(); requestAnimationFrame(fit); }
   if (document.readyState === "complete") run(); else addEventListener("load", run);
