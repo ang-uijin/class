@@ -8,60 +8,83 @@
 <style>html[data-rom="tlpa"] .rom-tl,html:not([data-rom="tlpa"]) .rom-tp{display:none}.rom-sw{position:fixed;top:4px;right:6px;z-index:9;font:12px/1.2 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:rgba(255,255,255,.92);border:1px solid #c9b48a;border-radius:12px;padding:3px 6px 3px 9px;color:#5a3a1a;white-space:nowrap}.rom-sw button{font:inherit;background:none;border:0;padding:2px 6px;margin-left:2px;border-radius:8px;color:#8a6a3a;cursor:pointer}.rom-sw button[aria-pressed="true"]{background:#5a3a1a;color:#fff;cursor:default}.rom-sw a{color:#8a6a3a;text-decoration:none;margin-left:4px}</style>
 <script>(function(){var r=null;try{r=localStorage.getItem("class-rom")}catch(e){}document.documentElement.setAttribute("data-rom",r==="tlpa"?"tlpa":"tailo")})();</script>
 
+<style>/* 2026-11 接上第一課的錄音（框只有 120px 高，版面不能變高） */
+.zz-aud-hd{position:relative;padding-right:28px}
+button.zz-aud-all{position:absolute;right:2px;top:50%;transform:translateY(-50%);
+ font:12px/1 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;cursor:pointer;
+ background:#fff6e0;border:1px solid #c9b48a;border-radius:10px;padding:1px 6px;color:#5a3a1a}
+button.zz-aud-all:hover{background:#ffe3a8}
+a.zz-play{display:inline-block;line-height:0}
+a.zz-play img{cursor:pointer}
+a.zz-play:hover img{filter:brightness(1.25)}
+a.zz-play.zz-on img{filter:brightness(.55)}
+</style>
+
 
 <link rel="stylesheet" href="think_type.css" type="text/css">
 <body background="../../images/bg6.jpg" leftmargin="0" topmargin="0" scroll="no" class="zz-flow">
 <div class="rom-sw" title="原站用 TLPA 標音，本站預設改標臺羅；點一下可以切換，瀏覽器會記住">拼音<button type="button" data-rom="tailo">臺羅</button><button type="button" data-rom="tlpa">TLPA</button><a href="../../notice.htm#rom" title="說明">?</a></div>
 <script>(function(){var d=document.documentElement,b=document.querySelectorAll(".rom-sw button");function show(v){d.setAttribute("data-rom",v);for(var i=0;i<b.length;i++)b[i].setAttribute("aria-pressed",String(b[i].getAttribute("data-rom")===v))}for(var i=0;i<b.length;i++)b[i].onclick=function(){var v=this.getAttribute("data-rom");show(v);try{localStorage.setItem("class-rom",v)}catch(e){}};show(d.getAttribute("data-rom"))})();</script>
 
+<script>(function(){var a=new Audio(),cur=null;
+function off(){if(cur){cur.classList.remove("zz-on");cur=null}}
+a.addEventListener("ended",off);a.addEventListener("pause",off);
+document.addEventListener("click",function(e){
+  var t=e.target.closest?e.target.closest("a.zz-play,button.zz-aud-all"):null;
+  if(!t)return;e.preventDefault();
+  var s=t.getAttribute("href")||t.getAttribute("data-src");if(!s)return;
+  off();a.pause();a.currentTime=0;a.src=s;
+  if(t.tagName==="A"){t.classList.add("zz-on");cur=t}
+  a.play().catch(function(){});});})();</script>
+
 
 <table width="100%" border="1" cellspacing="0" bordercolor="#FF9933">
   <tr>
     <td bgcolor="#FFCC66" bordercolor="#FFCC66"> 
-      <div align="center"><a href="#">機關單位</a></div>
+      <div align="center" class="zz-aud-hd"><button type="button" class="zz-aud-all" title="整頁朗讀" data-src="../../sound/L1/vac/v2.mp3">&#9654;</button><a href="#">機關單位</a></div>
     </td>
   </tr>
   <tr>
     <td bordercolor="#FFCC66"><marquee direction=up height=120 onMouseOut=start(); onMouseOver=stop(); scrollamount=1 scrolldelay=10 scrolltop="0" scrollleft="0">
       <table border=0 cellpadding=4 cellspacing=0 width="100%" align="center" class="think_type">
         <tr> 
-          <td width="4%"><img src="../../images/sound.gif" border="0" title="原站沒有附這一條的音檔，圖示只是裝飾" style="opacity:.4"></td>
+          <td width="4%"><a href="../../sound/L1/vac/v2-1.mp3" class="zz-play" title="點一下聽發音"><img src="../../images/sound.gif" border="0" alt="聽發音"></a></td>
           <td width="96%">總統府<br>
             <span class="rom-tp">cong<sup>2</sup>thong<sup>2</sup>hu<sup>2</sup></span><span class="rom-tl">tsóng-thóng-hú</span><br>
             總統府</td>
         </tr>
         <tr> 
-          <td width="4%"><img src="../../images/sound.gif" border="0" title="原站沒有附這一條的音檔，圖示只是裝飾" style="opacity:.4"></td>
+          <td width="4%"><a href="../../sound/L1/vac/v2-2.mp3" class="zz-play" title="點一下聽發音"><img src="../../images/sound.gif" border="0" alt="聽發音"></a></td>
           <td width="96%">市政府<br>
             <span class="rom-tp">chi<sup>7</sup>cing<sup>3</sup>hu<sup>2</sup></span><span class="rom-tl">tshī-tsìng-hú</span><br>
             市政府</td>
         </tr>
         <tr> 
-          <td width="4%"><img src="../../images/sound.gif" border="0" title="原站沒有附這一條的音檔，圖示只是裝飾" style="opacity:.4"></td>
+          <td width="4%"><a href="../../sound/L1/vac/v2-3.mp3" class="zz-play" title="點一下聽發音"><img src="../../images/sound.gif" border="0" alt="聽發音"></a></td>
           <td width="96%">縣政府<br>
             <span class="rom-tp">kuan<sup>7</sup>cing<sup>3</sup>hu<sup>2</sup></span><span class="rom-tl">kuān-tsìng-hú</span><br>
             縣政府</td>
         </tr>
         <tr> 
-          <td width="4%"><img src="../../images/sound.gif" border="0" title="原站沒有附這一條的音檔，圖示只是裝飾" style="opacity:.4"></td>
+          <td width="4%"><a href="../../sound/L1/vac/v2-4.mp3" class="zz-play" title="點一下聽發音"><img src="../../images/sound.gif" border="0" alt="聽發音"></a></td>
           <td width="96%">鎮公所<br>
             <span class="rom-tp">tin<sup>3</sup>kong<sup>1</sup>soo<sup>2</sup></span><span class="rom-tl">tìn-kong-sóo</span><br>
             鎮公所</td>
         </tr>
         <tr> 
-          <td width="4%"><img src="../../images/sound.gif" border="0" title="原站沒有附這一條的音檔，圖示只是裝飾" style="opacity:.4"></td>
+          <td width="4%"><a href="../../sound/L1/vac/v2-5.mp3" class="zz-play" title="點一下聽發音"><img src="../../images/sound.gif" border="0" alt="聽發音"></a></td>
           <td width="96%">里辦公室<br>
             <span class="rom-tp">li<sup>2</sup>pan<sup>7</sup>kong<sup>1</sup>sit<sup>4</sup></span><span class="rom-tl">lí-pān-kong-sit</span><br>
             里辦公室</td>
         </tr>
         <tr> 
-          <td width="4%"><img src="../../images/sound.gif" border="0" title="原站沒有附這一條的音檔，圖示只是裝飾" style="opacity:.4"></td>
+          <td width="4%"><a href="../../sound/L1/vac/v2-6.mp3" class="zz-play" title="點一下聽發音"><img src="../../images/sound.gif" border="0" alt="聽發音"></a></td>
           <td width="96%">鄉公所<br>
             <span class="rom-tp">hiong<sup>1</sup>kong<sup>1</sup>soo<sup>2</sup></span><span class="rom-tl">hiong-kong-sóo</span><br>
             鄉公所</td>
         </tr>
         <tr> 
-          <td width="4%"><img src="../../images/sound.gif" border="0" title="原站沒有附這一條的音檔，圖示只是裝飾" style="opacity:.4"></td>
+          <td width="4%"><a href="../../sound/L1/vac/v2-7.mp3" class="zz-play" title="點一下聽發音"><img src="../../images/sound.gif" border="0" alt="聽發音"></a></td>
           <td width="96%">村辦公室<br>
             <span class="rom-tp">chuan<sup>1</sup>pan<sup>7</sup>kong<sup>1</sup>sit<sup>4</sup></span><span class="rom-tl">tshuan-pān-kong-sit</span><br>
             村辦公室</td>
