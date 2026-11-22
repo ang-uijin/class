@@ -3,9 +3,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>/* 自動適配螢幕寬度（2026 年加的） */.zz-stage{position:relative;width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto}table.zz-stage{display:table}.zz-read{position:relative;width:-moz-fit-content;width:fit-content;padding-left:44px}@media (max-width:600px){body{margin:8px!important}.zz-stage.zz-book{width:auto}table.zz-book{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));width:auto!important;margin:0!important}table.zz-book>tbody,table.zz-book>tbody>tr{display:contents}table.zz-book>tbody>tr>td{display:block;width:auto!important;height:auto!important}table.zz-book td.zz-tb,table.zz-book td.zz-l,table.zz-book td.zz-r{display:none!important}table.zz-book td.zz-tab{order:-1}table.zz-book td.zz-tab img{display:block;width:100%;height:auto}table.zz-book td.zz-body{grid-column:1/-1;padding-top:10px}video{max-width:100%;height:auto}table.zz-assoc,table.zz-assoc>tbody,table.zz-assoc>tbody>tr,table.zz-assoc>tbody>tr>td{display:block;width:auto!important;height:auto!important;float:none}iframe.zz-voc{height:55vh}body.zz-flow table[width]:not([width$="%"]){width:auto!important}body.zz-flow img{max-width:100%;height:auto}}</style>
+<style>/* 自動適配螢幕寬度 */.zz-stage{position:relative;width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto}table.zz-stage{display:table}.zz-read{position:relative;width:-moz-fit-content;width:fit-content;padding-left:44px}@media (max-width:600px){body{margin:8px!important}.zz-stage.zz-book{width:auto}table.zz-book{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));width:auto!important;margin:0!important}table.zz-book>tbody,table.zz-book>tbody>tr{display:contents}table.zz-book>tbody>tr>td{display:block;width:auto!important;height:auto!important}table.zz-book td.zz-tb,table.zz-book td.zz-l,table.zz-book td.zz-r{display:none!important}table.zz-book td.zz-tab{order:-1}table.zz-book td.zz-tab img{display:block;width:100%;height:auto}table.zz-book td.zz-body{grid-column:1/-1;padding-top:10px}video{max-width:100%;height:auto}table.zz-assoc,table.zz-assoc>tbody,table.zz-assoc>tbody>tr,table.zz-assoc>tbody>tr>td{display:block;width:auto!important;height:auto!important;float:none}iframe.zz-voc{height:55vh}body.zz-flow table[width]:not([width$="%"]){width:auto!important}body.zz-flow img{max-width:100%;height:auto}}</style>
 
-<style>/* 2026-11 起念念課文的朗讀鈕不用 Flash；喇叭照原鈕的點陣圖放大 */
+<style>/* 念課文的朗讀鈕（不用 Flash）；喇叭照原鈕的點陣圖放大 */
 a.zz-play{display:inline-block;line-height:0}
 a.zz-play img{cursor:pointer;image-rendering:pixelated}
 a.zz-play:hover img{filter:brightness(1.25)}
@@ -122,7 +122,7 @@ document.addEventListener("click",function(e){
   if(t.tagName==="A"){t.classList.add("zz-on");cur=t}
   a.play().catch(function(){});});})();</script>
 <script>
-/* 自動適配螢幕寬度（2026 年加的）：.zz-stage 跟著框寬等比縮放（最多 1.6 倍）；手機上書本改排時改縮 .zz-fit；
+/* 自動適配螢幕寬度：.zz-stage 跟著框寬等比縮放（最多 1.6 倍）；手機上書本改排時改縮 .zz-fit；
    縮完還比框寬的頁（或根本沒有這兩種的頁），整頁等比縮小 */
 (function () {
   var ZMAX = 1.6;
